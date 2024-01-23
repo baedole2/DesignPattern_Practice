@@ -18,6 +18,7 @@ namespace DesignPattern_Practice
     /// </summary>
     public partial class MainWindow : Window
     {
+        int num = 0;
         public MainWindow()
         {
             InitializeComponent();
@@ -52,6 +53,9 @@ namespace DesignPattern_Practice
 
             // 상태 변경 및 옵저버들에게 알림
             subject.State = "시작 상태";
+
+            textbox_ObserverPattern1.Text = subject.State;
+            textbox_ObserverPattern2.Text = subject.State;
         }
 
         private void Button_Click(object sender, RoutedEventArgs e)
@@ -66,7 +70,9 @@ namespace DesignPattern_Practice
             subject.RegisterObserver(observer2);
 
             // 상태 변경 및 옵저버들에게 알림
-            subject.State = "버튼 누름";
+            subject.State = "버튼 눌림";
+            textbox_ObserverPattern1.Text = subject.State;
+            textbox_ObserverPattern2.Text = subject.State;
         }
     }
 }
