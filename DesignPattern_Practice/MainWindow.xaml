@@ -1,0 +1,28 @@
+﻿<Window x:Class="DesignPattern_Practice.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DesignPattern_Practice"
+        mc:Ignorable="d"
+        Title="MainWindow" Height="200" Width="300">
+    <Grid>
+        <Grid>
+            <Grid.ColumnDefinitions>
+                <ColumnDefinition Width="auto" />
+                <ColumnDefinition></ColumnDefinition>
+            </Grid.ColumnDefinitions>
+            <StackPanel Grid.Column="0">
+                <TextBox Text="전략 패턴 1  "/>
+                <TextBox Text="전략 패턴 2  "/>
+                <Button Content="옵저버 상태 변경  " Click="Button_Click"/>
+            </StackPanel>
+            <StackPanel  Grid.Column="1">
+                <TextBox x:Name="textbox_strategyPattern1" Text=""/>
+                <TextBox x:Name="textbox_strategyPattern2" Text=""/>
+                <TextBox x:Name="textbox_ObserverPattern1" Text=""/>
+                <TextBox x:Name="textbox_ObserverPattern2" Text=""/>
+            </StackPanel>
+        </Grid>
+    </Grid>
+</Window>
